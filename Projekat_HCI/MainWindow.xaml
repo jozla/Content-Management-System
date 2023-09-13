@@ -1,0 +1,56 @@
+﻿<Window x:Class="Projekat_HCI.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Projekat_HCI"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800" MouseLeftButtonDown="Window_MouseLeftButtonDown" WindowStyle="None" AllowsTransparency="True" Background="Transparent" WindowStartupLocation="CenterScreen">
+
+    <Window.Resources>
+        <Style TargetType="Button" x:Key="RoundButton">
+            <Setter Property="Background" Value="white"></Setter>
+            <Setter Property="Width"  Value="100"/>
+            <Setter Property="Height"  Value="35"/>
+            <Setter Property="Cursor"  Value="Hand"/>
+            <Setter Property="FontSize" Value="20"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Style.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="5" />
+                    <Setter Property="Background" Value="white"/>
+                </Style>
+            </Style.Resources>
+        </Style>
+    </Window.Resources>
+    <Canvas Height="350" Width="550">
+        <Path Stroke="Gray" StrokeThickness="2" Name="UIPath" >
+            <Path.Fill>
+                <ImageBrush ImageSource="other_images/background.jpg"></ImageBrush>
+            </Path.Fill>
+            <Path.Data>
+                <PathGeometry>
+                    <PathFigure StartPoint="50,0">
+                        <ArcSegment Size="50,65" RotationAngle="180" SweepDirection="CounterClockwise" Point="0,50" />
+                        <LineSegment Point="0,300"/>
+                        <ArcSegment Size="50,65" RotationAngle="180"  SweepDirection="CounterClockwise" Point="50,350" />
+                        <LineSegment Point="500,350"/>
+                        <ArcSegment Size="50,65" RotationAngle="180"  SweepDirection="CounterClockwise" Point="550,300" />
+                        <LineSegment Point="550,50"/>
+                        <ArcSegment Size="50,65" RotationAngle="180"  SweepDirection="CounterClockwise" Point="500,0" />
+                        <LineSegment Point="50,0"/>
+                    </PathFigure>
+                </PathGeometry>
+            </Path.Data>
+        </Path>
+
+        <Label FontSize="50px" Canvas.Left="200" Canvas.Top="40" Foreground="White" FontWeight="ExtraBold" Width="150">Login</Label>
+        <TextBox x:Name="emailTextBox" Width="250" Height="30" Canvas.Left="150" Canvas.Top="140" FontSize="20" GotFocus="emailTextBox_GotFocus" LostFocus="emailTextBox_LostFocus"></TextBox>
+
+        <PasswordBox x:Name="passwordTextBox" Width="250" Height="30" Canvas.Left="150" Canvas.Top="190" FontSize="20" GotFocus="passwordTextBox_GotFocus" LostFocus="passwordTextBox_LostFocus"></PasswordBox>
+        <Label x:Name="errorLabel" Width="250" Height="50" FontSize="15" FontWeight="ExtraBold" Canvas.Left="150" Canvas.Top="220" Foreground="red"></Label>
+        <Button x:Name="loginButton" Canvas.Left="300" Canvas.Top="280"  Style="{DynamicResource RoundButton}" Click="Button_Click_Login" >Login</Button>
+        <Button  Canvas.Left="150" Canvas.Top="280"  Style="{DynamicResource RoundButton}" Click="Button_Click_Exit">Exit</Button>
+
+    </Canvas>
+</Window>

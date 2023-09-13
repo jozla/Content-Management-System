@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<ArrayOfHororFilm xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <HororFilm>
+    <imeFilma>ime2</imeFilma>
+    <godinaIzdavanja>2023</godinaIzdavanja>
+    <slika>file:///C:/Users/Zlatko/Desktop/Projekat_HCI/images/slika2.png</slika>
+    <datoteka>rtf/ime2.rtf</datoteka>
+    <datum>2023-03-29T18:02:11.066678+02:00</datum>
+    <isSelected>false</isSelected>
+    <colors />
+  </HororFilm>
+</ArrayOfHororFilm>
